@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elite AI Bridge // A command deck for Elite Dangerous</title>
+<meta name="description" content="Elite AI Bridge turns a second screen into a retro command deck for Elite Dangerous: live ship data, one-click flight routines, combat, trade, navigation and colonization tools, an in-game overlay, a ship voice and an optional AI co-pilot.">
+<meta name="theme-color" content="#0b0f0a">
+<link rel="canonical" href="https://eliteaibridge.com/">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" href="assets/img/icon-64.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/icon-180.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Elite AI Bridge 2.0">
+<meta property="og:description" content="A retro command deck for Elite Dangerous. Live ship data, one-click routines, an in-game overlay, a ship voice and an optional AI co-pilot.">
+<meta property="og:url" content="https://eliteaibridge.com/">
+<meta property="og:image" content="https://eliteaibridge.com/assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="assets/fonts/VT323-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/Oswald.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ============ TOP PLATE ============ -->
+<header class="plate top" id="top">
+  <a class="brand" href="#top" aria-label="Elite AI Bridge home">
+    <img src="assets/img/icon-64.png" width="40" height="40" alt="">
+    <span class="brand-text"><b>ELITE AI BRIDGE</b><small>CORE DYNAMICS DEV // UNIT 2.0.0</small></span>
+  </a>
+  <div class="leds" aria-hidden="true">
+    <span class="led" data-led="0"><i></i>LINK</span>
+    <span class="led" data-led="1"><i></i>ELITE</span>
+    <span class="led" data-led="2"><i></i>VOICE</span>
+    <span class="led" data-led="3"><i></i>AI</span>
+  </div>
+  <nav class="topnav" aria-label="Sections">
+    <a href="#modules">Modules</a>
+    <a href="#different">Why it's different</a>
+    <a href="#overlay">Overlay</a>
+    <a href="#next">Coming next</a>
+    <a href="#answers">Answers</a>
+  </nav>
+  <button class="snd" id="snd" type="button" aria-pressed="false" title="Key sounds"><span>SOUND</span><b>OFF</b></button>
+  <a class="key key-cream key-sm" href="#download">DOWNLOAD</a>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero" aria-labelledby="hero-h">
+  <div class="hero-copy">
+    <p class="eyebrow">FOR ELITE DANGEROUS // WINDOWS PC</p>
+    <h1 id="hero-h">Your ship just got<br><span class="glow">a bridge.</span></h1>
+    <p class="lede">A second screen command deck for Elite Dangerous. Live ship data, one-click flight routines, combat, trade and colony tools, an in-game overlay and a ship that talks back. Built like hardware. Runs on your PC.</p>
+    <div class="hero-keys">
+      <a class="key key-cream" href="#download"><b>DOWNLOAD 2.0</b><small>WINDOWS 10 / 11</small></a>
+      <a class="key key-grey" href="#modules"><b>SEE IT WORK</b><small>TOUR THE MODULES</small></a>
+    </div>
+  </div>
+
+  <div class="monitor" id="heroMon">
+    <div class="bezel">
+      <span class="screw s1"></span><span class="screw s2"></span><span class="screw s3"></span><span class="screw s4"></span>
+      <div class="crt" id="heroCrt">
+        <picture>
+          <source type="image/webp" srcset="assets/img/flight-640.webp 640w, assets/img/flight-1280.webp 1280w, assets/img/flight-2400.webp 2400w" sizes="(max-width: 900px) 94vw, 1180px">
+          <img class="crt-img" src="assets/img/flight-1280.webp" width="1280" height="720" alt="The Elite AI Bridge Flight Deck: ship status, event log, the next five jumps on the route, and one-click action keys.">
+        </picture>
+        <div class="boot" id="boot" aria-hidden="true"><pre id="bootText"></pre></div>
+        <div class="scan" aria-hidden="true"></div>
+      </div>
+      <div class="bezel-foot"><span>FLIGHT DECK // LIVE</span><span class="pwr"><i></i>PWR</span></div>
+    </div>
+  </div>
+
+  <ul class="ticker" aria-label="Highlights">
+    <li>LIVE SHIP DATA</li><li>ONE-CLICK ROUTINES</li><li>BOUNTY HUNTING</li><li>TRADE LOOPS</li><li>COLONY HAULING</li><li>IN-GAME OVERLAY</li><li>SHIP VOICE</li><li>AI CO-PILOT (OPTIONAL)</li>
+  </ul>
+</section>
+
+<!-- ============ MODULES ============ -->
+<section class="sec" id="modules" aria-labelledby="mod-h">
+  <header class="sec-head">
+    <p class="tag">MODULE SELECT</p>
+    <h2 id="mod-h">Every job has a deck.</h2>
+    <p>Press a key. These are real screens from the Bridge, running on demo data.</p>
+  </header>
+
+  <div class="deck">
+    <div class="deck-keys" role="tablist" aria-label="Bridge modules" id="modKeys">
+      <button role="tab" class="dkey" aria-selected="true" data-img="flight" aria-controls="modPanel"><b>FLIGHT DECK</b><small>SHIP + ROUTE + LOG</small><i></i></button>
+      <button role="tab" class="dkey" aria-selected="false" data-img="combat" aria-controls="modPanel"><b>COMBAT</b><small>THREAT ANALYSIS</small><i></i></button>
+      <button role="tab" class="dkey" aria-selected="false" data-img="bounty" aria-controls="modPanel"><b>BOUNTY HUNTING</b><small>RES SITES BY DANGER</small><i></i></button>
+      <button role="tab" class="dkey" aria-selected="false" data-img="trade" aria-controls="modPanel"><b>TRADE</b><small>MARKETS + GOODS</small><i></i></button>
+      <button role="tab" class="dkey" aria-selected="false" data-img="trade1" aria-controls="modPanel"><b>TRADE LOOP</b><small>MY RUN + LEDGER</small><i></i></button>
+      <button role="tab" class="dkey" aria-selected="false" data-img="nav" aria-controls="modPanel"><b>NAVIGATION</b><small>ROUTE COMPUTER</small><i></i></button>
+      <button role="tab" class="dkey" aria-selected="false" data-img="colony" aria-controls="modPanel"><b>COLONIZATION</b><small>SYSTEM DEVELOPMENT</small><i></i></button>
+      <button role="tab" class="dkey" aria-selected="false" data-img="cmdr" aria-controls="modPanel"><b>COMMANDER</b><small>RECORDS + CAREER</small><i></i></button>
+    </div>
+
+    <div class="deck-view" id="modPanel" role="tabpanel">
+      <div class="bezel bezel-tight">
+        <div class="crt crt-mod">
+          <img class="crt-img" id="modImg" src="assets/img/flight-1280.webp" srcset="assets/img/flight-640.webp 640w, assets/img/flight-1280.webp 1280w, assets/img/flight-2400.webp 2400w" sizes="(max-width: 900px) 94vw, 900px" width="1280" height="720" alt="Flight Deck screen" loading="lazy">
+          <div class="scan" aria-hidden="true"></div>
+          <div class="static" id="modStatic" aria-hidden="true"></div>
+        </div>
+      </div>
+      <div class="readout" aria-live="polite">
+        <p class="ro-title" id="roTitle">FLIGHT DECK</p>
+        <p class="ro-body" id="roBody"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- readout copy (used by the keys; readable without JS) -->
+  <dl class="mod-copy" id="modCopy">
+    <dt data-k="flight">Flight Deck</dt>
+    <dd data-k="flight">Ship, shields, hull, fuel and power at a glance. The event log, your cargo and loadout, and the next five jumps with fuel stars marked. Dock, Launch, Clear and Jump, Refuel, Repair and Rearm are one key each.</dd>
+    <dt data-k="combat">Combat</dt>
+    <dd data-k="combat">Who you have targeted, how tough they are and what they are worth. Fighter and wing orders close at hand, without digging through panels mid-fight.</dd>
+    <dt data-k="bounty">Bounty Hunting</dt>
+    <dd data-k="bounty">Finds Resource Extraction Sites near you and sorts them by danger, so you pick the fight you came for. Plot to one with a key.</dd>
+    <dt data-k="trade">Trade</dt>
+    <dd data-k="trade">Route search from where you are, with what you can carry. Profit per ton, distance and pad size side by side.</dd>
+    <dt data-k="trade1">Trade Loop</dt>
+    <dd data-k="trade1">Set up a run and the Bridge plots each next leg as you go. A trip ledger keeps score of what you made.</dd>
+    <dt data-k="nav">Navigation</dt>
+    <dd data-k="nav">Follows the route you are flying, flags fuel stars, and keeps bookmarks one key away.</dd>
+    <dt data-k="colony">Colonization</dt>
+    <dd data-k="colony">Construction progress, what is still left to haul, and where to buy it. Built for the long haul of building a system.</dd>
+    <dt data-k="cmdr">Commander</dt>
+    <dd data-k="cmdr">Ranks, career totals, this session, and a few odd stats you did not know you were keeping.</dd>
+  </dl>
+</section>
+
+<!-- ============ DIFFERENT ============ -->
+<section class="sec sec-plate" id="different" aria-labelledby="diff-h">
+  <header class="sec-head">
+    <p class="tag">SYSTEMS CHECK</p>
+    <h2 id="diff-h">Not another spreadsheet in a browser tab.</h2>
+  </header>
+  <div class="cards">
+    <article class="card"><i class="ind"></i><h3>It does things</h3><p>One key docks you, launches you, or clears the station and jumps. The Bridge presses the keys you already bound in Elite, in order, so you don't have to.</p></article>
+    <article class="card"><i class="ind amber"></i><h3>CANCEL is always there</h3><p>Every routine can be stopped with one big red key. You stay in command of your ship. Always.</p></article>
+    <article class="card"><i class="ind"></i><h3>It talks</h3><p>A ship voice calls out alerts and events, generated locally on your PC. Every page has a short spoken tour on its ? key.</p></article>
+    <article class="card"><i class="ind"></i><h3>AI is optional</h3><p>Everything works without AI. Add the co-pilot with your own OpenAI key and talk to your ship with push to talk.</p></article>
+    <article class="card"><i class="ind amber"></i><h3>The overlay steps aside</h3><p>Panels float over Elite when you want them and fade away when you go to the Bridge. Off until you turn it on.</p></article>
+    <article class="card"><i class="ind"></i><h3>Built like hardware</h3><p>Riveted plates, lit keys, phosphor screens and a master caution light. It looks like it came bolted into your cockpit.</p></article>
+  </div>
+</section>
+
+<!-- ============ ONE KEY ============ -->
+<section class="sec stack" aria-labelledby="key-h">
+  <div class="split-copy">
+    <p class="tag">ACTIONS // FLIGHT DECK</p>
+    <h2 id="key-h">One key. Then hands off.</h2>
+    <p>Request docking, take off, clear the mail slot and engage the FSD. Refuel, repair and rearm in one pass. Each routine shows what it is doing while it runs.</p>
+    <p>If Elite doesn't have a key bound for something, the Bridge tells you plainly which one, instead of guessing.</p>
+  </div>
+  <figure class="strip">
+    <img src="assets/img/crop-actions.webp" width="1600" height="179" alt="Action keys: Dock, Launch, Clear and Jump, Refuel, Repair, Rearm, and a red Cancel key in a hazard-striped frame." loading="lazy">
+    <img src="assets/img/crop-route.webp" width="1600" height="168" alt="Route strip showing the next five jumps with star classes and fuel scoop markers." loading="lazy">
+  </figure>
+</section>
+
+<!-- ============ OVERLAY ============ -->
+<section class="sec overlay-sec" id="overlay" aria-labelledby="ov-h">
+  <div class="space" aria-hidden="true"><div class="stars"></div><div class="stars s2"></div><div class="arc"></div></div>
+  <div class="ov-wrap">
+    <div class="ov-copy">
+      <p class="tag">IN-GAME OVERLAY</p>
+      <h2 id="ov-h">One monitor? It comes to you.</h2>
+      <p>A small click-through panel over Elite shows what the ship is doing and the AI comms. It never takes your mouse. Bring the Bridge to the front and the panels fade out of its way.</p>
+      <ul class="ticks">
+        <li>Off by default. Turn it on in setup when you are ready.</li>
+        <li>Pick the screen, side and size.</li>
+        <li>Works with Elite in borderless or windowed mode.</li>
+      </ul>
+    </div>
+    <div class="ov-img">
+      <img src="assets/img/overlay-840.webp" srcset="assets/img/overlay-420.webp 420w, assets/img/overlay-840.webp 840w" sizes="(max-width: 900px) 80vw, 420px" width="840" height="820" alt="The overlay: a SHIP SPEAKING status panel with a voice waveform and an AI COMMS log." loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ============ SETUP ============ -->
+<section class="sec split rev" aria-labelledby="set-h">
+  <div class="split-copy">
+    <p class="tag">SETUP WIZARD</p>
+    <h2 id="set-h">It walks you through it. Out loud.</h2>
+    <p>The first run talks you through your name, where Elite keeps its files, your key bindings, sound and screens. Every step can be skipped and changed later.</p>
+    <p>The installer sets up its own private runtime, so it doesn't change any Python you already have installed.</p>
+  </div>
+  <div class="bezel bezel-tight small-mon">
+    <div class="crt">
+      <img class="crt-img" src="assets/img/wiz6-1280.webp" srcset="assets/img/wiz6-640.webp 640w, assets/img/wiz6-1280.webp 1280w" sizes="(max-width: 900px) 94vw, 640px" width="1280" height="720" alt="Setup wizard step asking which screen Elite is on, with a live overlay preview." loading="lazy">
+      <div class="scan" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AI ============ -->
+<section class="sec sec-plate ai" aria-labelledby="ai-h">
+  <header class="sec-head">
+    <p class="tag">AI CO-PILOT // OPTIONAL</p>
+    <h2 id="ai-h">Ask your ship. Out loud.</h2>
+  </header>
+  <div class="comms" aria-label="Example conversation">
+    <div class="comms-screen" id="comms">
+      <p><span class="who">CMDR</span><span class="say">Where can I sell this gold?</span></p>
+      <p class="b"><span class="who">BRIDGE</span><span class="say">Russell Orbital in Wolf 1301, eight light years. Plot it?</span></p>
+      <p><span class="who">CMDR</span><span class="say">Do it.</span></p>
+      <p class="b"><span class="who">BRIDGE</span><span class="say">Route plotted. Two jumps, both scoopable.</span></p>
+    </div>
+    <div class="comms-side">
+      <p>Hold push to talk and ask. The co-pilot knows your ship, your cargo and where you are, and it can run the same routines the keys do.</p>
+      <p class="fine">Uses your own OpenAI API key, billed by OpenAI. The setup wizard explains the cost and helps you set a spending limit. No key? Everything else still works.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMING NEXT ============ -->
+<section class="sec" id="next" aria-labelledby="next-h">
+  <header class="sec-head">
+    <p class="tag">IN THE WORKS</p>
+    <h2 id="next-h">More decks are coming.</h2>
+    <p>2.0 is the foundation. These keys aren't lit yet.</p>
+  </header>
+  <div class="dark-keys">
+    <div class="dkkey"><b>MINING</b><small>PROSPECT + REFINE</small><i></i></div>
+    <div class="dkkey"><b>EXOBIOLOGY</b><small>SAMPLES + PAYOUTS</small><i></i></div>
+    <div class="dkkey"><b>EXPLORATION</b><small>SCANS + CARTOGRAPHICS</small><i></i></div>
+    <div class="dkkey"><b>ON FOOT</b><small>SUIT + SETTLEMENTS</small><i></i></div>
+    <div class="dkkey wide"><b>BRIDGE ON ANY DEVICE</b><small>OPEN IT ON A TABLET OR PHONE ON YOUR HOME NETWORK</small><i></i></div>
+  </div>
+</section>
+
+<!-- ============ VIDEO ============ -->
+<section class="sec" id="video" aria-labelledby="vid-h">
+  <header class="sec-head">
+    <p class="tag">TRANSMISSION</p>
+    <h2 id="vid-h">Watch it fly.</h2>
+  </header>
+  <div class="bezel bezel-tight video-mon">
+    <iframe class="video-embed"
+      src="https://www.youtube-nocookie.com/embed/xPE4qVvhzEA"
+      title="Elite AI Bridge 2.0 | Free Elite Dangerous Companion App Showcase"
+      loading="lazy"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen></iframe>
+  </div>
+</section>
+
+<!-- ============ ANSWERS ============ -->
+<section class="sec" id="answers" aria-labelledby="faq-h">
+  <header class="sec-head">
+    <p class="tag">STRAIGHT ANSWERS</p>
+    <h2 id="faq-h">Before you install.</h2>
+  </header>
+  <div class="faq">
+    <details><summary>What do I need?</summary><p>Windows 10 or 11 (64-bit), Elite Dangerous on PC, and an internet connection during install. A second screen is the best way to use it, but the overlay covers you on one.</p></details>
+    <details><summary>Windows says it "protected your PC". Is that normal?</summary><p>Yes. The installer is new and not code-signed yet, so SmartScreen warns about it. Click More info, then Run anyway. Only download it from the official release page linked here.</p></details>
+    <details><summary>How long does install take?</summary><p>About 3 to 10 minutes. It downloads and sets up a private Python runtime and the local voice. A checklist shows each step as it goes.</p></details>
+    <details><summary>Do I need AI or an OpenAI account?</summary><p>No. The decks, routines, overlay and ship voice all work without it. The AI co-pilot is an add-on that uses your own OpenAI API key, and OpenAI bills that usage to you.</p></details>
+    <details><summary>Does it change the game?</summary><p>No. It reads the journal files Elite writes for companion apps, and it presses the keys you bound in Elite's controls. Nothing is injected into the game.</p></details>
+    <details><summary>Why doesn't the overlay show in fullscreen?</summary><p>Exclusive fullscreen draws over everything. Set Elite to borderless or windowed and the overlay sits on top.</p></details>
+    <details><summary>Where's the source?</summary><p>The full readable source is on GitHub. You can see exactly what it does, and build the installer yourself.</p></details>
+    <details><summary>Is this made by Frontier?</summary><p>No. Elite AI Bridge is an independent community project. It is not affiliated with or endorsed by Frontier Developments.</p></details>
+  </div>
+</section>
+
+<!-- ============ DOWNLOAD ============ -->
+<section class="sec download" id="download" aria-labelledby="dl-h">
+  <div class="dl-plate">
+    <span class="screw s1"></span><span class="screw s2"></span><span class="screw s3"></span><span class="screw s4"></span>
+    <p class="tag">READY FOR LAUNCH</p>
+    <h2 id="dl-h">Elite AI Bridge 2.0</h2>
+    <p class="dl-sub">Free to use. Windows 10 / 11, 64-bit.</p>
+    <div class="hazard">
+      <a class="key key-cream key-xl" href="https://github.com/CoreDynamicsDev/Elite-AI-Bridge-Download/releases/latest" rel="noopener"><b>DOWNLOAD INSTALLER</b><small>LATEST RELEASE ON GITHUB</small></a>
+    </div>
+    <p class="dl-links">
+      <a href="https://github.com/CoreDynamicsDev/Elite-AI-Bridge" rel="noopener">View the source</a>
+      <span aria-hidden="true">//</span>
+      <a href="https://github.com/CoreDynamicsDev/Elite-AI-Bridge-Download/releases/latest" rel="noopener">Release notes</a>
+    </p>
+    <p class="tip">Enjoying it? <a href="https://ko-fi.com/eliteaibridge" rel="noopener">Leave a tip on Ko-fi</a>. It keeps new decks coming.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-row">
+    <a class="brand" href="#top"><img src="assets/img/icon-64.png" width="28" height="28" alt=""><span class="brand-text"><b>ELITE AI BRIDGE</b></span></a>
+    <p><a href="mailto:coredynamicsdev@gmail.com">coredynamicsdev@gmail.com</a></p>
+  </div>
+  <p class="legal">Elite AI Bridge is an independent, community-made companion app. It is not affiliated with, sponsored by, approved by, or endorsed by Frontier Developments plc or OpenAI. Elite Dangerous and related names, marks and content belong to Frontier Developments plc and their respective rights holders. Screens shown use demo data.</p>
+  <p class="legal">&copy; 2026 Core Dynamics Dev</p>
+</footer>
+
+<script src="js/site.js" defer></script>
+</body>
+</html>
