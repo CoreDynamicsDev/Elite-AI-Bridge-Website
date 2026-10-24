@@ -2,6 +2,27 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<!-- Google tag (gtag.js), consent mode: analytics cookies only after the visitor allows them -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  var eabConsent = null;
+  try { eabConsent = localStorage.getItem('eab-analytics'); } catch (e) {}
+  gtag('consent', 'default', {
+    analytics_storage: eabConsent === 'granted' ? 'granted' : 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied'
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M7HE852MYZ"></script>
+<script>
+  gtag('js', new Date());
+  gtag('config', 'G-M7HE852MYZ', {
+    allow_google_signals: false,
+    allow_ad_personalization_signals: false
+  });
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lost signal // Elite AI Bridge</title>
 <meta name="robots" content="noindex">
@@ -25,5 +46,6 @@
     <a class="key key-cream" href="/"><b>RETURN TO BRIDGE</b><small>ELITEAIBRIDGE.COM</small></a>
   </div>
 </main>
+<script src="/js/analytics.js" defer></script>
 </body>
 </html>

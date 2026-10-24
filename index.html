@@ -2,6 +2,27 @@
 <html lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
+<!-- Google tag (gtag.js), consent mode: analytics cookies only after the visitor allows them -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  var eabConsent = null;
+  try { eabConsent = localStorage.getItem('eab-analytics'); } catch (e) {}
+  gtag('consent', 'default', {
+    analytics_storage: eabConsent === 'granted' ? 'granted' : 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied'
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M7HE852MYZ"></script>
+<script>
+  gtag('js', new Date());
+  gtag('config', 'G-M7HE852MYZ', {
+    allow_google_signals: false,
+    allow_ad_personalization_signals: false
+  });
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Elite AI Bridge // A command deck for Elite Dangerous</title>
 <meta name="description" content="Elite AI Bridge turns a second screen into a retro command deck for Elite Dangerous: live ship data, one-click flight routines, combat, trade, navigation and colonization tools, an in-game overlay, a ship voice and an optional AI co-pilot.">
@@ -43,7 +64,7 @@
     <a href="#answers">Answers</a>
   </nav>
   <button class="snd" id="snd" type="button" aria-pressed="false" title="Key sounds"><span>SOUND</span><b>OFF</b></button>
-  <a class="key key-cream key-sm" href="#download">DOWNLOAD</a>
+  <a class="key key-cream key-sm" href="#download" data-track="download_section_click" data-loc="header">DOWNLOAD</a>
 </header>
 
 <main id="main">
@@ -55,7 +76,7 @@
     <h1 id="hero-h">Your ship just got<br><span class="glow">a bridge.</span></h1>
     <p class="lede">A second screen command deck for Elite Dangerous. Live ship data, one-click flight routines, combat, trade and colony tools, an in-game overlay and a ship that talks back. Built like hardware. Runs on your PC.</p>
     <div class="hero-keys">
-      <a class="key key-cream" href="#download"><b>DOWNLOAD 2.0</b><small>WINDOWS 10 / 11</small></a>
+      <a class="key key-cream" href="#download" data-track="download_section_click" data-loc="hero"><b>DOWNLOAD 2.0</b><small>WINDOWS 10 / 11</small></a>
       <a class="key key-grey" href="#modules"><b>SEE IT WORK</b><small>TOUR THE MODULES</small></a>
     </div>
   </div>
@@ -280,14 +301,14 @@
     <h2 id="dl-h">Elite AI Bridge 2.0</h2>
     <p class="dl-sub">Free to use. Windows 10 / 11, 64-bit.</p>
     <div class="hazard">
-      <a class="key key-cream key-xl" href="https://github.com/CoreDynamicsDev/Elite-AI-Bridge-Download/releases/latest" rel="noopener"><b>DOWNLOAD INSTALLER</b><small>LATEST RELEASE ON GITHUB</small></a>
+      <a class="key key-cream key-xl" href="https://github.com/CoreDynamicsDev/Elite-AI-Bridge-Download/releases/latest" rel="noopener" data-track="download_installer_click" data-loc="download_plate"><b>DOWNLOAD INSTALLER</b><small>LATEST RELEASE ON GITHUB</small></a>
     </div>
     <p class="dl-links">
-      <a href="https://github.com/CoreDynamicsDev/Elite-AI-Bridge" rel="noopener">View the source</a>
+      <a href="https://github.com/CoreDynamicsDev/Elite-AI-Bridge" rel="noopener" data-track="source_code_click" data-loc="download_plate">View the source</a>
       <span aria-hidden="true">//</span>
-      <a href="https://github.com/CoreDynamicsDev/Elite-AI-Bridge-Download/releases/latest" rel="noopener">Release notes</a>
+      <a href="https://github.com/CoreDynamicsDev/Elite-AI-Bridge-Download/releases/latest" rel="noopener" data-track="release_notes_click" data-loc="download_plate">Release notes</a>
     </p>
-    <p class="tip">Enjoying it? <a href="https://ko-fi.com/eliteaibridge" rel="noopener">Leave a tip on Ko-fi</a>. It keeps new decks coming.</p>
+    <p class="tip">Enjoying it? <a href="https://ko-fi.com/eliteaibridge" rel="noopener" data-track="kofi_tip_click" data-loc="download_plate">Leave a tip on Ko-fi</a>. It keeps new decks coming.</p>
   </div>
 </section>
 
@@ -296,12 +317,13 @@
 <footer class="foot">
   <div class="foot-row">
     <a class="brand" href="#top"><img src="assets/img/icon-64.png" width="28" height="28" alt=""><span class="brand-text"><b>ELITE AI BRIDGE</b></span></a>
-    <p><a href="mailto:coredynamicsdev@gmail.com">coredynamicsdev@gmail.com</a></p>
+    <p><a href="mailto:coredynamicsdev@gmail.com" data-track="contact_email_click" data-loc="footer">coredynamicsdev@gmail.com</a></p>
   </div>
   <p class="legal">Elite AI Bridge is an independent, community-made companion app. It is not affiliated with, sponsored by, approved by, or endorsed by Frontier Developments plc or OpenAI. Elite Dangerous and related names, marks and content belong to Frontier Developments plc and their respective rights holders. Screens shown use demo data.</p>
-  <p class="legal">&copy; 2026 Core Dynamics Dev</p>
+  <p class="legal">&copy; 2026 Core Dynamics Dev <span aria-hidden="true">//</span> <a href="privacy.html">Privacy</a> <span aria-hidden="true">//</span> <button type="button" class="linkbtn" data-consent-open>Cookie settings</button></p>
 </footer>
 
 <script src="js/site.js" defer></script>
+<script src="js/analytics.js" defer></script>
 </body>
 </html>
