@@ -48,7 +48,7 @@
 <header class="plate top" id="top">
   <a class="brand" href="#top" aria-label="Elite AI Bridge home">
     <img src="assets/img/icon-64.png" width="40" height="40" alt="">
-    <span class="brand-text"><b>ELITE AI BRIDGE</b><small>CORE DYNAMICS DEV // UNIT 2.0.0</small></span>
+    <span class="brand-text"><b>ELITE AI BRIDGE</b><small id="unitTag">CORE DYNAMICS DEV // UNIT 2.0.5</small></span>
   </a>
   <div class="leds" aria-hidden="true">
     <span class="led" data-led="0"><i></i>LINK</span>
@@ -57,6 +57,7 @@
     <span class="led" data-led="3"><i></i>AI</span>
   </div>
   <nav class="topnav" aria-label="Sections">
+    <a href="#log">Updates</a>
     <a href="#modules">Modules</a>
     <a href="#different">Why it's different</a>
     <a href="#overlay">Overlay</a>
@@ -99,6 +100,43 @@
   <ul class="ticker" aria-label="Highlights">
     <li>LIVE SHIP DATA</li><li>ONE-CLICK ROUTINES</li><li>BOUNTY HUNTING</li><li>TRADE LOOPS</li><li>COLONY HAULING</li><li>IN-GAME OVERLAY</li><li>SHIP VOICE</li><li>AI CO-PILOT (OPTIONAL)</li>
   </ul>
+</section>
+
+<!-- ============ SHIP'S LOG (latest release, read from GitHub) ============ -->
+<section class="sec" id="log" aria-labelledby="log-h">
+  <header class="sec-head">
+    <p class="tag">SHIP'S LOG</p>
+    <h2 id="log-h">Fresh off the bench.</h2>
+    <p>Every release, straight from the release notes. Updates are free and the Bridge tells you when one is out.</p>
+  </header>
+  <div class="log-grid">
+    <article class="log-latest readout" aria-labelledby="logVer">
+      <p class="log-meta"><span class="log-live"><i></i>LATEST</span><span id="logDate">1 NOV 2026</span></p>
+      <h3 class="ro-title" id="logVer">ELITE AI BRIDGE 2.0.5</h3>
+      <ul class="log-items" id="logItems">
+        <li><b>MINING page</b> a verdict on every rock you prospect, your haul and where to sell it, rings near you, and surface mining in the Rhino.</li>
+        <li><b>ENGINEERING page</b> engineered modules on your ship and in storage, your engineers, and your materials.</li>
+        <li><b>Commander page</b> deliveries on their way and a session debrief.</li>
+        <li><b>Fixes</b> auto dock, route plotting, and a launcher that repairs itself.</li>
+      </ul>
+      <a class="key key-grey key-sm log-key" id="logLink" href="https://github.com/CoreDynamicsDev/Elite-AI-Bridge-Download/releases/tag/v2.0.5" rel="noopener" data-track="release_notes_click" data-loc="ship_log">FULL NOTES</a>
+    </article>
+    <div class="log-past">
+      <p class="log-past-h">EARLIER RELEASES</p>
+      <ol class="log-list" id="logList">
+        <li><a href="https://github.com/CoreDynamicsDev/Elite-AI-Bridge-Download/releases/tag/v2.0.4" rel="noopener" data-track="release_notes_click" data-loc="ship_log_past"><b>2.0.4</b><span>24 OCT 2026</span><em>Old school amber screen theme, startup sound</em></a></li>
+      </ol>
+      <a class="log-all" href="https://github.com/CoreDynamicsDev/Elite-AI-Bridge-Download/releases" rel="noopener" data-track="release_notes_click" data-loc="ship_log_all">All releases on GitHub</a>
+      <div class="crew">
+        <p class="log-past-h">TEST PILOTS</p>
+        <ul class="crew-list">
+          <li><b>CMDR Alphabrodawg</b></li>
+          <li><b>CMDR AJustaFire</b></li>
+        </ul>
+        <p class="crew-note">They fly the early builds, send in the logs and find what breaks first. Thank you.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- ============ VIDEO ============ -->
@@ -267,7 +305,6 @@
     <p>2.0 is the foundation. These keys aren't lit yet.</p>
   </header>
   <div class="dark-keys">
-    <div class="dkkey"><b>MINING</b><small>PROSPECT + REFINE</small><i></i></div>
     <div class="dkkey"><b>EXOBIOLOGY</b><small>SAMPLES + PAYOUTS</small><i></i></div>
     <div class="dkkey"><b>EXPLORATION</b><small>SCANS + CARTOGRAPHICS</small><i></i></div>
     <div class="dkkey"><b>ON FOOT</b><small>SUIT + SETTLEMENTS</small><i></i></div>
@@ -324,6 +361,7 @@
 </footer>
 
 <script src="js/site.js" defer></script>
+<script src="js/updates.js" defer></script>
 <script src="js/analytics.js" defer></script>
 </body>
 </html>
