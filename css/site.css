@@ -298,3 +298,36 @@ p{margin:0 0 1em}
 
 /* Responsive YouTube video within the cockpit frame */
 .video-embed{display:block;width:100%;aspect-ratio:16/9;height:auto;min-height:0;border:0;background:#000;border-radius:5px}
+
+/* ---------- ship's log (latest release, read from GitHub by js/updates.js) ---------- */
+#log{padding-top:60px}
+.log-grid{display:grid;grid-template-columns:1.45fr 1fr;gap:26px;align-items:start}
+.log-latest{position:relative;padding:22px 24px 24px}
+.log-meta{display:flex;justify-content:space-between;align-items:center;margin:0 0 10px;font:13px var(--tech);letter-spacing:.16em;color:var(--dim)}
+.log-live{display:flex;align-items:center;gap:8px;color:var(--phos)}
+.log-live i{width:9px;height:9px;border-radius:50%;background:var(--phos);box-shadow:0 0 8px var(--phos);animation:blink 1.6s steps(1) infinite}
+.log-latest .ro-title{font-size:clamp(28px,3.4vw,40px);margin-bottom:14px}
+.log-items{list-style:none;margin:0 0 20px;padding:0;display:grid;gap:10px}
+.log-items li{position:relative;padding-left:22px;color:#a8e6b6;font:16px/1.5 var(--tech)}
+.log-items li::before{content:"\25B8";position:absolute;left:2px;top:0;color:var(--phos2)}
+.log-items b{color:var(--phos);font-weight:400;text-shadow:0 0 6px rgba(125,255,154,.35);margin-right:4px}
+.log-key{min-width:0}
+.log-past{display:grid;gap:12px}
+.log-past-h{font:13px var(--tech);letter-spacing:.2em;color:var(--amber);margin:0}
+.log-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.log-list a{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;text-decoration:none;padding:11px 14px;border-radius:8px;background:linear-gradient(180deg,#1b2019,#141812);border:1px solid #363c32;box-shadow:inset 0 1px 0 rgba(255,255,255,.05)}
+.log-list a:hover{border-color:#4fdc78}
+.log-list b{font:600 19px/1 var(--head);letter-spacing:.05em;color:#e7e9de}
+.log-list span{font:12px/1.6 var(--tech);letter-spacing:.12em;color:var(--dim);justify-self:end}
+.log-list em{grid-column:1/-1;font-style:normal;color:#b3b7a9;font-size:15px;line-height:1.4}
+.log-all{font:13px var(--tech);letter-spacing:.12em;color:var(--dim)}
+.log-all:hover{color:var(--ink)}
+.crew{margin-top:14px;padding-top:16px;border-top:1px solid #2a3027;display:grid;gap:8px}
+.crew-list{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.crew-list li{padding:7px 12px;border-radius:6px;background:var(--crt);border:1px solid #1f3a26}
+.crew-list b{font:20px/1 var(--mono);font-weight:400;color:var(--phos);letter-spacing:.05em;text-shadow:0 0 8px rgba(125,255,154,.4)}
+.crew-note{margin:0;color:#b3b7a9;font-size:15px}
+@media (max-width:900px){
+  .log-grid{grid-template-columns:1fr}
+  .log-latest{padding:18px 16px 20px}
+}
