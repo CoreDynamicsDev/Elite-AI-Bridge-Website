@@ -331,3 +331,8 @@ p{margin:0 0 1em}
   .log-grid{grid-template-columns:1fr}
   .log-latest{padding:18px 16px 20px}
 }
+.log-reel{display:grid;grid-template-columns:minmax(0,560px) 1fr;gap:26px;align-items:center;margin-top:26px}
+.reel-copy{display:grid;gap:8px}
+.reel-copy p{margin:0}
+.reel-copy p:not(.log-past-h){color:#b3b7a9;font-size:15px;max-width:34ch}
+@media (max-width:900px){.log-reel{grid-template-columns:1fr;gap:12px}}
