@@ -57,12 +57,12 @@
     <span class="led" data-led="3"><i></i>AI</span>
   </div>
   <nav class="topnav" aria-label="Sections">
-    <a href="#log">Updates</a>
     <a href="#modules">Modules</a>
     <a href="#different">Why it's different</a>
     <a href="#overlay">Overlay</a>
     <a href="#next">Coming next</a>
     <a href="#answers">Answers</a>
+    <a href="#log">Updates</a>
   </nav>
   <button class="snd" id="snd" type="button" aria-pressed="false" title="Key sounds"><span>SOUND</span><b>OFF</b></button>
   <a class="key key-cream key-sm" href="#download" data-track="download_section_click" data-loc="header">DOWNLOAD</a>
@@ -77,9 +77,15 @@
     <h1 id="hero-h">Your ship just got<br><span class="glow">a bridge.</span></h1>
     <p class="lede">A second screen command deck for Elite Dangerous. Live ship data, one-click flight routines, combat, trade and colony tools, an in-game overlay and a ship that talks back. Built like hardware. Runs on your PC.</p>
     <div class="hero-keys">
-      <a class="key key-cream" href="#download" data-track="download_section_click" data-loc="hero"><b>DOWNLOAD 2.0</b><small>WINDOWS 10 / 11</small></a>
+      <a class="key key-cream" href="#download" data-track="download_section_click" data-loc="hero"><b>DOWNLOAD</b><small>WINDOWS 10 / 11</small></a>
       <a class="key key-grey" href="#modules"><b>SEE IT WORK</b><small>TOUR THE MODULES</small></a>
     </div>
+    <a class="latest" href="#log" data-track="release_notes_click" data-loc="hero_latest">
+      <span class="log-live"><i></i>LATEST</span>
+      <b class="js-ver">2.0.7</b><span class="latest-date" id="latestDate">15 NOV 2026</span>
+      <em id="latestLine">Setup fix, bigger earnings, email us</em>
+      <span class="latest-go">WHAT'S NEW &#9656;</span>
+    </a>
   </div>
 
   <div class="monitor" id="heroMon">
@@ -100,59 +106,6 @@
   <ul class="ticker" aria-label="Highlights">
     <li>LIVE SHIP DATA</li><li>ONE-CLICK ROUTINES</li><li>BOUNTY HUNTING</li><li>TRADE LOOPS</li><li>COLONY HAULING</li><li>IN-GAME OVERLAY</li><li>HOLIDAY DECKS</li><li>SHIP VOICE</li><li>AI CO-PILOT (OPTIONAL)</li>
   </ul>
-</section>
-
-<!-- ============ SHIP'S LOG (latest release, read from GitHub) ============ -->
-<section class="sec" id="log" aria-labelledby="log-h">
-  <header class="sec-head">
-    <p class="tag">SHIP'S LOG</p>
-    <h2 id="log-h">Fresh off the bench.</h2>
-    <p>Every release, straight from the release notes. Updates are free and the Bridge tells you when one is out.</p>
-  </header>
-  <div class="log-grid">
-    <article class="log-latest readout" aria-labelledby="logVer">
-      <p class="log-meta"><span class="log-live"><i></i>LATEST</span><span id="logDate">15 NOV 2026</span></p>
-      <h3 class="ro-title" id="logVer">ELITE AI BRIDGE 2.0.7</h3>
-      <ul class="log-items" id="logItems">
-        <li><b>Setup fix</b> first-time setup works on PCs with Python 3.14, thanks to a player's report.</li>
-        <li><b>Bigger earnings</b> trip counters go to 10 digits for the big trade runs.</li>
-        <li><b>Email us</b> from Setup &gt; Status for bugs, ideas, or to become a test pilot.</li>
-      </ul>
-      <a class="key key-grey key-sm log-key" id="logLink" href="https://github.com/CoreDynamicsDev/Elite-AI-Bridge-Download/releases/tag/v2.0.7" rel="noopener" data-track="release_notes_click" data-loc="ship_log">FULL NOTES</a>
-    </article>
-    <div class="log-past">
-      <p class="log-past-h">EARLIER RELEASES</p>
-      <ol class="log-list" id="logList">
-        <li><a href="https://github.com/CoreDynamicsDev/Elite-AI-Bridge-Download/releases/tag/v2.0.6" rel="noopener" data-track="release_notes_click" data-loc="ship_log_past"><b>2.0.6</b><span>6 NOV 2026</span><em>Trade filters, holidays, ten screen colours</em></a></li>
-        <li><a href="https://github.com/CoreDynamicsDev/Elite-AI-Bridge-Download/releases/tag/v2.0.5" rel="noopener" data-track="release_notes_click" data-loc="ship_log_past"><b>2.0.5</b><span>1 NOV 2026</span><em>Mining and Engineering pages, docking and route plot fixes</em></a></li>
-      </ol>
-      <a class="log-all" href="https://github.com/CoreDynamicsDev/Elite-AI-Bridge-Download/releases" rel="noopener" data-track="release_notes_click" data-loc="ship_log_all">All releases on GitHub</a>
-      <div class="crew">
-        <p class="log-past-h">TEST PILOTS</p>
-        <ul class="crew-list">
-          <li><b>CMDR Alphabrodawg</b></li>
-          <li><b>CMDR AJustaFire</b></li>
-        </ul>
-        <p class="crew-note">They fly the Bridge, send in the logs and find what breaks first. Thank you.</p>
-        <p class="crew-note">Want to help test the Bridge? Fly it, tell us what breaks, and get any future supporter extras free. <a href="mailto:coredynamicsdev@gmail.com?subject=Test%20pilot" data-track="test_pilot_email" data-loc="ship_log">Email us</a>.</p>
-      </div>
-    </div>
-  </div>
-  <div class="log-reel">
-    <div class="bezel bezel-tight reel-mon">
-      <iframe class="video-embed"
-        src="https://www.youtube-nocookie.com/embed/Xa2LIao-UFA"
-        title="Elite AI Bridge 2.0.6 update reel"
-        loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen></iframe>
-    </div>
-    <div class="reel-copy">
-      <p class="log-past-h">UPDATE REEL // 2.0.6</p>
-      <p>Mining, Engineering, the new trade filters and the holiday decks, in under a minute.</p>
-    </div>
-  </div>
 </section>
 
 <!-- ============ VIDEO ============ -->
@@ -257,18 +210,6 @@
   </figure>
 </section>
 
-<!-- ============ HOLIDAYS ============ -->
-<section class="sec stack" id="holidays" aria-labelledby="hol-h">
-  <div class="split-copy">
-    <p class="tag">HOLIDAYS // SCREEN COLOURS</p>
-    <h2 id="hol-h">The deck dresses up for the season.</h2>
-    <p>New Year, Valentine's Day, Lunar New Year, St. Patrick's Day, Easter, Halloween, Autumn and Christmas. Each one brings its own screen colour, decorations on the edges, a few things drifting down the window and a sound when you click them. It's on by default and follows the date. One switch turns it off.</p>
-    <p>Or pick your own screen colour from ten. Only the screens change, and red still only means danger.</p>
-  </div>
-  <figure class="strip">
-    <img src="assets/img/holidays-1280.webp" srcset="assets/img/holidays-640.webp 640w, assets/img/holidays-1280.webp 1280w" sizes="(max-width: 900px) 94vw, 1180px" width="1280" height="1091" alt="Six holiday looks on the Flight Deck: Christmas lights and snow, New Year confetti in gold, Valentine's hearts in rose, Lunar New Year lanterns in jade, Halloween bats in purple, and Easter eggs in sky blue." loading="lazy">
-  </figure>
-</section>
 
 <!-- ============ OVERLAY ============ -->
 <section class="sec overlay-sec" id="overlay" aria-labelledby="ov-h">
@@ -326,6 +267,30 @@
   </div>
 </section>
 
+<!-- ============ HOLIDAYS ============ -->
+<section class="sec split" id="holidays" aria-labelledby="hol-h">
+  <div class="split-copy">
+    <p class="tag">HOLIDAYS // SCREEN COLOURS</p>
+    <h2 id="hol-h">The deck dresses up for the season.</h2>
+    <p>New Year, Valentine's Day, Lunar New Year, St. Patrick's Day, Easter, Halloween, Autumn and Christmas. Each one brings its own screen colour, decorations on the edges, a few things drifting down the window and a sound when you click them. It's on by default and follows the date. One switch turns it off.</p>
+    <p>Or pick your own screen colour from ten. Only the screens change, and red still only means danger.</p>
+  </div>
+  <figure class="hol-show" aria-label="Holiday looks">
+    <div class="bezel bezel-tight small-mon">
+      <div class="crt hol-crt">
+        <img class="crt-img hol-img on" src="assets/img/hol-christmas.webp" width="635" height="357" alt="The Flight Deck dressed for Christmas lights and snow in ice blue." loading="lazy">
+        <img class="crt-img hol-img" src="assets/img/hol-new-year.webp" width="635" height="357" alt="The Flight Deck dressed for New Year confetti in gold." loading="lazy">
+        <img class="crt-img hol-img" src="assets/img/hol-valentines.webp" width="635" height="357" alt="The Flight Deck dressed for Valentine's hearts in rose." loading="lazy">
+        <img class="crt-img hol-img" src="assets/img/hol-lunar.webp" width="635" height="357" alt="The Flight Deck dressed for Lunar New Year lanterns in jade." loading="lazy">
+        <img class="crt-img hol-img" src="assets/img/hol-halloween.webp" width="635" height="357" alt="The Flight Deck dressed for Halloween in purple." loading="lazy">
+        <img class="crt-img hol-img" src="assets/img/hol-easter.webp" width="635" height="357" alt="The Flight Deck dressed for Easter eggs in sky blue." loading="lazy">
+        <div class="scan" aria-hidden="true"></div>
+      </div>
+    </div>
+    <div class="hol-tabs"><button type="button" class="hol-tab on" data-i="0">CHRISTMAS</button><button type="button" class="hol-tab" data-i="1">NEW YEAR</button><button type="button" class="hol-tab" data-i="2">VALENTINE'S DAY</button><button type="button" class="hol-tab" data-i="3">LUNAR NEW YEAR</button><button type="button" class="hol-tab" data-i="4">HALLOWEEN</button><button type="button" class="hol-tab" data-i="5">EASTER</button></div>
+  </figure>
+</section>
+
 <!-- ============ COMING NEXT ============ -->
 <section class="sec" id="next" aria-labelledby="next-h">
   <header class="sec-head">
@@ -359,13 +324,66 @@
   </div>
 </section>
 
+<!-- ============ SHIP'S LOG (latest release, read from GitHub) ============ -->
+<section class="sec" id="log" aria-labelledby="log-h">
+  <header class="sec-head">
+    <p class="tag">SHIP'S LOG</p>
+    <h2 id="log-h">Fresh off the bench.</h2>
+    <p>Every release, straight from the release notes. Updates are free and the Bridge tells you when one is out.</p>
+  </header>
+  <div class="log-grid">
+    <article class="log-latest readout" aria-labelledby="logVer">
+      <p class="log-meta"><span class="log-live"><i></i>LATEST</span><span id="logDate">15 NOV 2026</span></p>
+      <h3 class="ro-title" id="logVer">ELITE AI BRIDGE 2.0.7</h3>
+      <ul class="log-items" id="logItems">
+        <li><b>Setup fix</b> first-time setup works on PCs with Python 3.14, thanks to a player's report.</li>
+        <li><b>Bigger earnings</b> trip counters go to 10 digits for the big trade runs.</li>
+        <li><b>Email us</b> from Setup &gt; Status for bugs, ideas, or to become a test pilot.</li>
+      </ul>
+      <a class="key key-grey key-sm log-key" id="logLink" href="https://github.com/CoreDynamicsDev/Elite-AI-Bridge-Download/releases/tag/v2.0.7" rel="noopener" data-track="release_notes_click" data-loc="ship_log">FULL NOTES</a>
+    </article>
+    <div class="log-past">
+      <p class="log-past-h">EARLIER RELEASES</p>
+      <ol class="log-list" id="logList">
+        <li><a href="https://github.com/CoreDynamicsDev/Elite-AI-Bridge-Download/releases/tag/v2.0.6" rel="noopener" data-track="release_notes_click" data-loc="ship_log_past"><b>2.0.6</b><span>6 NOV 2026</span><em>Trade filters, holidays, ten screen colours</em></a></li>
+        <li><a href="https://github.com/CoreDynamicsDev/Elite-AI-Bridge-Download/releases/tag/v2.0.5" rel="noopener" data-track="release_notes_click" data-loc="ship_log_past"><b>2.0.5</b><span>1 NOV 2026</span><em>Mining and Engineering pages, docking and route plot fixes</em></a></li>
+      </ol>
+      <a class="log-all" href="https://github.com/CoreDynamicsDev/Elite-AI-Bridge-Download/releases" rel="noopener" data-track="release_notes_click" data-loc="ship_log_all">All releases on GitHub</a>
+      <div class="crew">
+        <p class="log-past-h">TEST PILOTS</p>
+        <ul class="crew-list">
+          <li><b>CMDR Alphabrodawg</b></li>
+          <li><b>CMDR AJustaFire</b></li>
+        </ul>
+        <p class="crew-note">They fly the Bridge, send in the logs and find what breaks first. Thank you.</p>
+        <p class="crew-note">Want to help test the Bridge? Fly it, tell us what breaks, and get any future supporter extras free. <a href="mailto:coredynamicsdev@gmail.com?subject=Test%20pilot" data-track="test_pilot_email" data-loc="ship_log">Email us</a>.</p>
+      </div>
+    </div>
+  </div>
+  <div class="log-reel">
+    <div class="bezel bezel-tight reel-mon">
+      <iframe class="video-embed"
+        src="https://www.youtube-nocookie.com/embed/Xa2LIao-UFA"
+        title="Elite AI Bridge 2.0.6 update reel"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
+    <div class="reel-copy">
+      <p class="log-past-h">UPDATE REEL // 2.0.6</p>
+      <p>Mining, Engineering, the new trade filters and the holiday decks, in under a minute.</p>
+    </div>
+  </div>
+</section>
+
 <!-- ============ DOWNLOAD ============ -->
 <section class="sec download" id="download" aria-labelledby="dl-h">
   <div class="dl-plate">
     <span class="screw s1"></span><span class="screw s2"></span><span class="screw s3"></span><span class="screw s4"></span>
     <p class="tag">READY FOR LAUNCH</p>
-    <h2 id="dl-h">Elite AI Bridge 2.0</h2>
-    <p class="dl-sub">Free to use. Windows 10 / 11, 64-bit.</p>
+    <h2 id="dl-h">Elite AI Bridge</h2>
+    <p class="dl-sub">Free to use. Windows 10 / 11, 64-bit. Latest: <span class="js-ver">2.0.7</span></p>
     <div class="hazard">
       <a class="key key-cream key-xl" href="https://github.com/CoreDynamicsDev/Elite-AI-Bridge-Download/releases/latest" rel="noopener" data-track="download_installer_click" data-loc="download_plate"><b>DOWNLOAD INSTALLER</b><small>LATEST RELEASE ON GITHUB</small></a>
     </div>
