@@ -336,3 +336,24 @@ p{margin:0 0 1em}
 .reel-copy p{margin:0}
 .reel-copy p:not(.log-past-h){color:#b3b7a9;font-size:15px;max-width:34ch}
 @media (max-width:900px){.log-reel{grid-template-columns:1fr;gap:12px}}
+
+/* ---------- hero LATEST strip (2026-11-17): one line that says the Bridge is kept up; the full Ship's Log is near the download */
+.latest{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 14px;margin:22px auto 0;padding:10px 16px;max-width:760px;
+  border:1px solid #24402c;border-radius:8px;background:rgba(6,20,11,.6);font:14px/1.4 var(--tech);letter-spacing:.08em;color:var(--dim);text-decoration:none}
+.latest b{color:var(--phos);font:22px/1 var(--mono);letter-spacing:.04em}
+.latest em{font-style:normal;color:#c4c8bb}
+.latest .log-live{font-size:12px;letter-spacing:.16em}
+.latest-go{color:var(--phos);white-space:nowrap}
+.latest:hover{border-color:var(--phos2)}
+.latest:hover .latest-go{text-decoration:underline}
+@media (min-width:1101px){.latest{justify-content:flex-start;margin-left:0}}
+
+/* ---------- holidays: one screen that steps through the looks, with a key for each */
+.hol-show{margin:0}
+.hol-crt .hol-img{position:absolute;inset:0;opacity:0;transition:opacity .6s}
+.hol-crt .hol-img.on{opacity:1}
+.hol-tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:14px;max-width:680px;margin-left:auto}
+.hol-tab{font:12px/1 var(--tech);letter-spacing:.14em;color:var(--dim);background:#141712;border:1px solid #2f352b;border-radius:6px;padding:8px 10px;cursor:pointer}
+.hol-tab.on{color:var(--phos);border-color:var(--phos2);box-shadow:0 0 10px rgba(63,211,107,.25)}
+.hol-tab:hover{color:var(--ink)}
+@media (max-width:900px){.hol-tabs{margin-left:0;justify-content:flex-start}}
