@@ -33,7 +33,7 @@
   // ---------- boot sequence + LEDs ----------
   var leds = $$(".led");
   var lines = [
-    ["CORE DYNAMICS DEV // UNIT 2.0.0", -1],
+    [(($("#unitTag") || {}).textContent || "CORE DYNAMICS DEV").trim(), -1],
     ["", -1],
     ["LINK ............ OK", 0],
     ["ELITE JOURNAL ... OK", 1],
@@ -148,5 +148,18 @@
       es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); ro.unobserve(e.target); } });
     }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
     els.forEach(function (el) { ro.observe(el); });
+  }
+
+  // ---------- holidays: step through the looks every 3.5 s; a tab picks one and stops the cycle ----------
+  var holImgs = $$(".hol-img"), holTabs = $$(".hol-tab");
+  if (holImgs.length && holTabs.length) {
+    var hcur = 0, htimer = null;
+    var hshow = function (i) {
+      hcur = i;
+      holImgs.forEach(function (im, j) { im.classList.toggle("on", j === i); });
+      holTabs.forEach(function (b, j) { b.classList.toggle("on", j === i); b.setAttribute("aria-pressed", j === i); });
+    };
+    holTabs.forEach(function (b, i) { b.addEventListener("click", function () { if (htimer) { clearInterval(htimer); htimer = null; } hshow(i); }); });
+    if (!reduce) htimer = setInterval(function () { hshow((hcur + 1) % holImgs.length); }, 3500);
   }
 })();

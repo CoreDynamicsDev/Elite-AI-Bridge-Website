@@ -55,6 +55,11 @@
         var unit = $("unitTag"); if (unit) unit.textContent = "CORE DYNAMICS DEV // UNIT " + v;
       }
       $("logDate").textContent = day(latest.published_at);
+      // the hero LATEST strip, the hero DOWNLOAD key and the download plate show the same version
+      if (v) Array.prototype.forEach.call(document.querySelectorAll(".js-ver"), function (el) { el.textContent = v; });
+      if ($("latestDate")) $("latestDate").textContent = day(latest.published_at);
+      var labels = items.filter(function (h) { return h.label; }).map(function (h) { return h.label; }).slice(0, 3);
+      if ($("latestLine") && labels.length) $("latestLine").textContent = labels.join(", ");
       $("logLink").href = latest.html_url;
       if (items.length) {
         $("logItems").innerHTML = items.slice(0, 5).map(function (h) {
