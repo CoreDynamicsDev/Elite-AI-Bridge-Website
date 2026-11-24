@@ -357,3 +357,25 @@ p{margin:0 0 1em}
 .hol-tab.on{color:var(--phos);border-color:var(--phos2);box-shadow:0 0 10px rgba(63,211,107,.25)}
 .hol-tab:hover{color:var(--ink)}
 @media (max-width:900px){.hol-tabs{margin-left:0;justify-content:flex-start}}
+
+/* ---------- the crew wall (test pilots + supporters) ---------- */
+.wall{padding:64px 44px 50px}
+.wall .sec-head p:last-child{max-width:760px}
+.wall-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:10px}
+.wall-board{background:var(--crt);border:1px solid #1f3a26;border-radius:12px;padding:22px 24px 24px;box-shadow:inset 0 0 40px rgba(0,0,0,.7);display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.wall-h{margin:0;font:16px var(--tech);letter-spacing:.24em;color:var(--amber)}
+.wall-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;width:100%}
+.wall-list li{position:relative;padding:12px 14px 12px 30px;border-radius:7px;background:linear-gradient(180deg,#0d2414,#08170d);border:1px solid #2a5a36}
+.wall-list li::before{content:"";position:absolute;left:12px;top:50%;width:8px;height:8px;margin-top:-4px;border-radius:50%;background:var(--phos);box-shadow:0 0 8px var(--phos)}
+.wall-list b{font:24px/1 var(--mono);font-weight:400;color:var(--phos);letter-spacing:.05em;text-shadow:0 0 8px rgba(125,255,154,.45);overflow-wrap:anywhere}
+.wall-list li.open{background:transparent;border:1px dashed #2f4a35}
+.wall-list li.open::before{background:#1d3323;box-shadow:none}
+.wall-list li.open b{color:#3f6b4b;text-shadow:none}
+.wall-note{margin:0;color:#b3b7a9;font-size:15px}
+.wall-how{font:15px var(--tech);letter-spacing:.18em;color:var(--phos);margin:4px 0 0}
+.wall-note .wall-how{margin:0 6px 0 0}
+.wall-steps{margin:0;padding-left:1.3em;color:#b3b7a9;font-size:15px;display:grid;gap:6px}
+.wall-board .key{margin-top:6px}
+.wall-thanks{margin:26px 0 0;text-align:center;font:22px var(--mono);color:var(--phos);letter-spacing:.06em;text-shadow:0 0 10px rgba(125,255,154,.45)}
+@media (max-width:900px){.wall{padding:50px 18px 40px}.wall-grid{grid-template-columns:1fr}}
+@media (max-width:420px){.wall-list{grid-template-columns:1fr}}
